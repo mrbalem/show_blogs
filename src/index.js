@@ -4,9 +4,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Route from './route/route';
+import { StoreProvider } from './context/StoreContext';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Route />, document.getElementById('root'));
+ReactDOM.render(
+	<StoreProvider>
+		<Route />
+	</StoreProvider>,
+	document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

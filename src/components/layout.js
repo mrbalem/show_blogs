@@ -2,13 +2,14 @@
 
 import React from 'react';
 import Navbar from './navbar';
+import '../App.css';
 
 // import Home from '../pages/Home';
 // import Contac from '../pages/Contac';
 // import Service from '../pages/Services';
 
 const Layout = props => (
-	<div className='App-header'>
+	<div className='App-header p-4'>
 		<Navbar />
 		{props.children}
 	</div>
