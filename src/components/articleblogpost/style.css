@@ -1,0 +1,61 @@
+/** @format */
+
+.parrafo p {
+	line-height: 1.5;
+	margin: 30px 0;
+	font-size: 20px;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 700;
+	margin-top: 60px;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 700;
+	margin-top: 60px;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: 700;
+	margin-top: 60px;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+blockquote {
+	font-style: italic;
+	color: #6c757d;
+	margin: 0 0 1rem;
+}
+
+.blockqoute {
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+}
+
+.caption {
+	font-size: 14px;
+	font-style: italic;
+	display: block;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.text-muted {
+	color: #6c757d !important;
+}
+
+.img-fluid,
+.img-thumbnail {
+	max-width: 100%;
+	height: auto;
+}

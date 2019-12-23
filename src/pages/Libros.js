@@ -1,13 +1,24 @@
 /** @format */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Libros = () => {
-	const ff = [1, 3, 3, 3, 3];
+	const ff = [1, 7, 8, 5, 4, 3, 4, 3, 2];
+	const removeClass = () => {
+		let elemento = document.getElementsByClassName('bg-dark')[0];
+		if (elemento !== undefined) {
+			elemento.className = elemento.className.replace(/\bocult\b/g, '');
+		}
+		//elemento.className += 'ocult';
+	};
+
+	useEffect(() => {
+		removeClass();
+	}, []);
 
 	return (
-		<div>
+		<div className='p-4'>
 			<br />
 			<br />
 			<nav className='navbar navbar-dark bg-dark'>

@@ -9,7 +9,7 @@ import '../App.css';
 // import Service from '../pages/Services';
 
 const Layout = props => (
-	<div className='App-header p-4'>
+	<div className='App-header'>
 		<Navbar />
 		{props.children}
 	</div>
