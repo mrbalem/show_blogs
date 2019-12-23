@@ -7,7 +7,9 @@ import Layout from '../components/layout';
 import BlogPost from '../pages/blogpost';
 import Blogs from '../pages/blogs';
 import Login from '../pages/Login';
+import Createblog from '../pages/createBlog';
 import DetalleLibro from '../components/detalletLibro';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Ruote = () => {
@@ -20,6 +22,7 @@ const Ruote = () => {
 					<Route path='/libro/:id' component={DetalleLibro} />
 					<Route path='/blogs' component={Blogs} />
 					<Route path='/login' component={Login} />
+					<Route path='/createblog/:id' component={Createblog} />
 					<Route path='/blogpost/:id' component={BlogPost} />
 					{/* <Route component={Notfound} /> */}
 				</Switch>

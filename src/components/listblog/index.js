@@ -12,7 +12,7 @@ const ListBlog = props => {
 	useEffect(() => {
 		if (datas === null) {
 			setConfig({
-				type: 'get',
+				type: 'GET',
 				urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlogLists',
 				isrequest: true
 			});

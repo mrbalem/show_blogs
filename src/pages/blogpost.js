@@ -18,7 +18,7 @@ const BLogPost = props => {
 		UpdateNavcolor();
 		if (props.location.state === undefined) {
 			setConfig({
-				type: 'post',
+				type: 'POST',
 				urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlog',
 				parameters: {
 					url:
