@@ -2,31 +2,19 @@
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import useServices from '../../services/useServices';
+// import useServices from '../../services/useServices';
 import '../../utils/Libs';
 import './style.css';
 
 const ListBlog = props => {
-	const [datas, setConfig] = useServices();
-
-	useEffect(() => {
-		if (datas === null) {
-			setConfig({
-				type: 'GET',
-				urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlogLists',
-				isrequest: true
-			});
-		}
-	}, []);
-
-	console.log(datas);
-	if (datas === null) {
+	// console.log(datas);
+	if (props.data === null) {
 		return <div>cargando...</div>;
 	}
 
 	return (
 		<div class='row articles'>
-			{datas.data.map((data, index) => (
+			{props.data.map((data, index) => (
 				<div class='col-sm-6 col-md-4 item' key={`${index}`}>
 					<Link
 						to={{

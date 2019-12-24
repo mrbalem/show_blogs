@@ -5,7 +5,8 @@ header.masthead {
 	background: no-repeat 50%;
 	background-color: #6c757d;
 	background-attachment: scroll;
-	position: relative;
+	height: 100%;
+	/* position: relative; */
 	background-size: cover;
 }
 header.masthead .overlay {

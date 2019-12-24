@@ -1,7 +1,25 @@
 /** @format */
-import React from 'react';
+import React, { useEffect } from 'react';
+import LIstBLog from '../components/listblog';
+// import useServices from '../services/useServices';
 
 const FooterBLogPost = () => {
+	// modificar esta parte
+	// const [datas, setconfig] = useServices();
+
+	// useEffect(() => {
+	// if (datas === null) {
+	// cambiar el para metro
+	// https://us-central1-fir-mrvalem.cloudfunctions.net/getBLogAutor
+	// parametro : autor : "..."
+	// setconfig({
+	// type: 'GET',
+	// urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlogLists',
+	// isrequest: true
+	// });
+	// }
+	// }, []);
+
 	return (
 		<footer>
 			<div className='container'>
@@ -33,6 +51,7 @@ const FooterBLogPost = () => {
 					</div>
 				</div>
 			</div>
+			{/* <LIstBLog data={datas !== null ? datas.data : null}></LIstBLog> */}
 		</footer>
 	);
 };
