@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import HeaderBlogPost from '../components/headerblogpost';
 import ArticleBlogPost from '../components/articleblogpost';
 import FooterBlogPost from '../components/footerBlogPost';
+import Spinner from '../components/spinner';
 import useServices from '../services/useServices';
 
 const BLogPost = props => {
@@ -31,7 +32,7 @@ const BLogPost = props => {
 
 	if (props.location.state === undefined) {
 		if (datas === null) {
-			return <div>cargando</div>;
+			return <Spinner />;
 		}
 	}
 

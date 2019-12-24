@@ -1,24 +1,24 @@
 /** @format */
 import React, { useEffect } from 'react';
 import LIstBLog from '../components/listblog';
-// import useServices from '../services/useServices';
+import useServices from '../services/useServices';
 
 const FooterBLogPost = () => {
 	// modificar esta parte
-	// const [datas, setconfig] = useServices();
+	const [datas, setconfig] = useServices();
 
-	// useEffect(() => {
-	// if (datas === null) {
-	// cambiar el para metro
-	// https://us-central1-fir-mrvalem.cloudfunctions.net/getBLogAutor
-	// parametro : autor : "..."
-	// setconfig({
-	// type: 'GET',
-	// urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlogLists',
-	// isrequest: true
-	// });
-	// }
-	// }, []);
+	useEffect(() => {
+		if (datas === null) {
+			// cambiar el para metro
+			// https://us-central1-fir-mrvalem.cloudfunctions.net/getBLogAutor
+			// parametro : autor : "..."
+			setconfig({
+				type: 'GET',
+				urls: 'https://us-central1-fir-mrvalem.cloudfunctions.net/getBlogLists',
+				isrequest: true
+			});
+		}
+	}, []);
 
 	return (
 		<footer>
@@ -45,13 +45,18 @@ const FooterBLogPost = () => {
 								</span>
 							</li>
 						</ul>
-						<p className='text-muted copyright'>
+						<p style={{ textAlign: 'center' }} className='text-muted copyright'>
 							Copyright&nbsp;©&nbsp;Brand 2018
+							<a href='#cabecera'> inicio </a>
 						</p>
+					</div>
+					<div class='article-list'>
+						<div class='container'>
+							<LIstBLog data={datas !== null ? datas.data : null}></LIstBLog>
+						</div>
 					</div>
 				</div>
 			</div>
-			{/* <LIstBLog data={datas !== null ? datas.data : null}></LIstBLog> */}
 		</footer>
 	);
 };

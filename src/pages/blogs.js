@@ -43,6 +43,7 @@ const Blogs = () => {
 							encuentro en esta oportunidad vendremos
 						</p>
 					</div>
+					<br></br>
 					<ListBlog data={datas !== null ? datas.data : null}></ListBlog>
 				</div>
 			</div>

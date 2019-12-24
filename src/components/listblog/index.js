@@ -1,7 +1,8 @@
 /** @format */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../spinner';
 // import useServices from '../../services/useServices';
 import '../../utils/Libs';
 import './style.css';
@@ -9,7 +10,7 @@ import './style.css';
 const ListBlog = props => {
 	// console.log(datas);
 	if (props.data === null) {
-		return <div>cargando...</div>;
+		return <Spinner />;
 	}
 
 	return (
@@ -18,7 +19,7 @@ const ListBlog = props => {
 				<div class='col-sm-6 col-md-4 item' key={`${index}`}>
 					<Link
 						to={{
-							pathname: `/blogpost/${data.Titulo.cleanString()}`,
+							pathname: `/blogpost/${data.Titulo.cleanString()}#`,
 							state: data
 						}}>
 						<img class='img-fluid' src={data.portada} />

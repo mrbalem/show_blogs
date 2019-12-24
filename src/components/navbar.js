@@ -14,8 +14,8 @@ const Navbar = () => {
 			className='navbar  navbar-dark bg-dark navbar-expand-lg fixed-top'
 			id='mainNav'>
 			<div className='container'>
-				<Link to='/' className='navbar-brand'>
-					Brand
+				<Link to='/blogs' className='navbar-brand'>
+					Mrvalem
 				</Link>
 				<button
 					data-toggle='collapse'
@@ -33,7 +33,7 @@ const Navbar = () => {
 								Blogs
 							</Link>
 						</li>
-						<li className='nav-item' role='presentation'>
+						{/* <li className='nav-item' role='presentation'>
 							<Link to='/libros' className='nav-link'>
 								Libros
 							</Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
 									iniciar
 								</Link>
 							</li>
-						)}
+						)} */}
 					</ul>
 				</div>
 			</div>

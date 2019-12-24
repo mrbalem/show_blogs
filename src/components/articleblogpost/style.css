@@ -17,6 +17,9 @@ h2 {
 	font-weight: 700;
 	margin-top: 60px;
 }
+.hr {
+	text-align: center;
+}
 
 h3 {
 	font-size: 25px;
@@ -26,6 +29,13 @@ h3 {
 
 .mb-0 {
 	margin-bottom: 0 !important;
+}
+
+pre {
+	margin-top: 60px;
+	padding: 0.5em;
+	color: #ffffff;
+	background: #6c757d;
 }
 
 blockquote {

@@ -13,7 +13,7 @@ const HeaderBlogPost = props => {
 			style={{
 				backgroundImage: `url('${props.portada}')`
 			}}>
-			<div className='overlay'></div>
+			<div className='overlay' id='cabecera'></div>
 			<div className='container'>
 				<div className='row'>
 					<div className='col-md-10 col-lg-8 mx-auto'>
