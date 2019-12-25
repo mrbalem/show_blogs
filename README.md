@@ -56,7 +56,7 @@ to use the hoosk useService that is used to make consume API rest https.
                     type: 'GET' // type es el tipo de petecion que se va a realizar 'GET', 'POST', 'UPDATE', 'DELETE'
                     urls: 'https://wwww.domain.com/api/getData' // urls, es la url del servicio API rest
                     parameters: {            // parameters, seran los paratros que se enviara al servidor si se realiza una
-                        name: 'name'          // una peticion get sin parametros se puede obviar
+                        name: 'name'          // peticion get no es necesario parameters
                     }
                     isrequest: true    // isrequest, por defecto es false ya que asi evitamos
                                         // cuando inicialicemos el servicio no realice ninguna petición.
