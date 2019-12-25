@@ -17,7 +17,7 @@ const Ruote = () => {
 		<BrowserRouter>
 			<Layout>
 				<Switch>
-					<Route exact path='/' component={Home} />
+					<Route exact path='/' component={Blogs} />
 					<Route path='/libros' component={Libros} />
 					<Route path='/libro/:id' component={DetalleLibro} />
 					<Route path='/blogs' component={Blogs} />
