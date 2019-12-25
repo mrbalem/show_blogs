@@ -1,11 +1,11 @@
 /** @format */
 
 import React, { useEffect } from 'react';
-import HeaderBlogPost from '../components/headerblogpost';
-import ArticleBlogPost from '../components/articleblogpost';
-import FooterBlogPost from '../components/footerBlogPost';
-import Spinner from '../components/spinner';
-import useServices from '../services/useServices';
+import HeaderBlogPost from '../../components/headerblogpost';
+import ArticleBlogPost from '../../components/articleblogpost';
+import FooterBlogPost from '../../components/FooterBlogPost';
+import Spinner from '../../components/spinner';
+import useServices from '../../services/useServices';
 
 const BLogPost = props => {
 	const [datas, setConfig] = useServices();
@@ -28,7 +28,7 @@ const BLogPost = props => {
 				isrequest: true
 			});
 		}
-	}, []);
+	}, [props.location.state, setConfig]);
 
 	if (props.location.state === undefined) {
 		if (datas === null) {

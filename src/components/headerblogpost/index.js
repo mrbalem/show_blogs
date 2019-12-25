@@ -33,8 +33,8 @@ const HeaderBlogPost = props => {
 							<h1>{props.titulo}</h1>
 
 							<span className='meta'>
-								Escrito por&nbsp;<a href='#'>{props.autor}</a>&nbsp;on August
-								24, 2018
+								Escrito por&nbsp;<span>{props.autor}</span>&nbsp;on August 24,
+								2018
 							</span>
 						</div>
 					</div>

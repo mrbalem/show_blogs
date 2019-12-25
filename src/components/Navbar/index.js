@@ -1,15 +1,12 @@
 /** @format */
 
-import React, { useContext } from 'react';
-//import logo from '../logo.svg';
-import { StoreContext } from '../context/StoreContext';
+import React from 'react';
+// import { StoreContext } from '../../context/StoreContext';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-	const { state } = useContext(StoreContext);
+	// const { state } = useContext(StoreContext);
 	return (
-		//navbar navbar-expand-lg navbar-light bg-light
-
 		<nav
 			className='navbar  navbar-dark bg-dark navbar-expand-lg fixed-top'
 			id='mainNav'>
@@ -33,25 +30,6 @@ const Navbar = () => {
 								Blogs
 							</Link>
 						</li>
-						{/* <li className='nav-item' role='presentation'>
-							<Link to='/libros' className='nav-link'>
-								Libros
-							</Link>
-						</li>
-						<li className='nav-item' role='presentation'>
-							<Link className='nav-link'>Portafolio</Link>
-						</li>
-						{state.login ? (
-							<li className='nav-item' role='presentation'>
-								<Link className='nav-link'>Perfil</Link>
-							</li>
-						) : (
-							<li className='nav-item' role='presentation'>
-								<Link to='/login' className='nav-link'>
-									iniciar
-								</Link>
-							</li>
-						)} */}
 					</ul>
 				</div>
 			</div>

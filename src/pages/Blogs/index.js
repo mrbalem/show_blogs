@@ -1,9 +1,9 @@
 /** @format */
 
 import React, { useEffect } from 'react';
-import Space from '../components/Space';
-import useServices from '../services/useServices';
-import ListBlog from '../components/listblog';
+import Spaces from '../../components/Spaces';
+import useServices from '../../services/useServices';
+import ListBlog from '../../components/listblog';
 
 const Blogs = () => {
 	const [datas, setconfig] = useServices();
@@ -16,7 +16,7 @@ const Blogs = () => {
 				isrequest: true
 			});
 		}
-	}, []);
+	}, [datas, setconfig]);
 
 	const removeClass = () => {
 		let elemento = document.getElementsByClassName('bg-dark')[0];
@@ -32,7 +32,7 @@ const Blogs = () => {
 
 	return (
 		<div>
-			<Space />
+			<Spaces />
 			<div class='article-list'></div>
 			<div class='article-list'>
 				<div class='container'>

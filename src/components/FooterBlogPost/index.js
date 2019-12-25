@@ -1,7 +1,8 @@
 /** @format */
+
 import React, { useEffect } from 'react';
-import LIstBLog from '../components/listblog';
-import useServices from '../services/useServices';
+import LIstBLog from '../../components/listblog';
+import useServices from '../../services/useServices';
 
 const FooterBLogPost = () => {
 	// modificar esta parte
@@ -18,7 +19,7 @@ const FooterBLogPost = () => {
 				isrequest: true
 			});
 		}
-	}, []);
+	}, [datas, setconfig]);
 
 	return (
 		<footer>
@@ -50,8 +51,8 @@ const FooterBLogPost = () => {
 							<a href='#cabecera'> inicio </a>
 						</p>
 					</div>
-					<div class='article-list'>
-						<div class='container'>
+					<div className='article-list'>
+						<div className='container'>
 							<LIstBLog data={datas !== null ? datas.data : null}></LIstBLog>
 						</div>
 					</div>
