@@ -4,7 +4,6 @@ import React from 'react';
 import Layout from '../components/Layout';
 import BLogPost from '../pages/BLogPosts';
 import BLogs from '../pages/Blogs';
-
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Ruote = () => {

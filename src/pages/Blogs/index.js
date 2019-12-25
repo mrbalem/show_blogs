@@ -23,7 +23,6 @@ const Blogs = () => {
 		if (elemento !== undefined) {
 			elemento.className = elemento.className.replace(/\bocult\b/g, '');
 		}
-		//elemento.className += 'ocult';
 	};
 
 	useEffect(() => {
@@ -40,7 +39,7 @@ const Blogs = () => {
 						<h2 class='text-center'>útlimos artículos</h2>
 						<p class='text-center'>
 							en artichack encontraras los articulos mas recomendamos del ultimo
-							encuentro en esta oportunidad vendremos
+							encuentro en esta oportunidad Tendremos
 						</p>
 					</div>
 					<br></br>
