@@ -78,5 +78,7 @@ to use the hoosk useService that is used to make consume API rest https.
         )
       
       }
+      
+      export default nameComponent;
  
  ```
