@@ -30,3 +30,55 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
+### using useService
+
+to use the hoosk useService that is used to make consume API rest https.
+
+ ``` javascript
+      
+      import React, { useEffect } from 'react'
+      import useService from '../service/useService';
+      
+      const nameComponent = () => {
+        
+        //inicializamos el servicio
+        // datas, contendra el resultado de la peticion
+        // setConfig, sera el que realize la peticion con los parametros necesarios
+        
+        const [datas, setConfig] = useService();
+        
+        // realizamos una peticion antes que el componente se cargue
+        
+        useEffect(() => {
+              
+              //por defecto setConfig resive como unico parametro un objeto
+              setConfig({
+                    type: 'GET' // type es el tipo de petecion que se va a realizar 'GET', 'POST', 'UPDATE', 'DELETE'
+                    urls: 'https://wwww.domain.com/api/getData' // urls, es la url del servicio API rest
+                    parameters: {            // parameters, seran los paratros que se enviara al servidor si se realiza una
+                        name: 'name'          // peticion get no es necesario parameters
+                    }
+                    isrequest: true    // isrequest, por defecto es false ya que asi evitamos
+                                        // cuando inicialicemos el servicio no realice ninguna petición.
+              })
+              
+        
+        
+        }, [datas, setConfig])
+        
+          //debug 
+          
+          console.log(datas)
+          
+          
+        return  (
+            <div>
+            hola mundo
+            </div>
+        )
+      
+      }
+      
+      export default nameComponent;
+ 
+ ```
