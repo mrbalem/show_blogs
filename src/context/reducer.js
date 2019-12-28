@@ -1,7 +1,7 @@
 /** @format */
 
 const initialState = {
-	user: localStorage.getItem('user'),
+	user: JSON.parse(localStorage.getItem('user')),
 	login: JSON.parse(localStorage.getItem('login'))
 };
 

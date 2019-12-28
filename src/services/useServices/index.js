@@ -17,14 +17,28 @@ const useServices = () => {
 	useEffect(() => {
 		async function getData() {
 			try {
+				if (config.parametersGET) {
+					config.urls += Object.keys(config.parametersGET)
+						.map(
+							k =>
+								'?' +
+								encodeURIComponent(k) +
+								'=' +
+								encodeURIComponent(config.parametersGET[k])
+						)
+						.join('&');
+				}
 				const response = await fetch(config.urls, {
 					method: `${config.type}`,
 					body: JSON.stringify(
 						config.parameters === null ? null : config.parameters
 					),
-					headers: {
-						'content-type': 'application/json'
-					}
+					headers: config.parametersGET
+						? {}
+						: {
+								'content-type': 'application/json'
+						  },
+					cache: 'default'
 				});
 				if (response.ok) {
 					const data = await response.json();

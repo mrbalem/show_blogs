@@ -1,0 +1,17 @@
+/** @format */
+
+.border {
+	border: 1px solid #e3e6f0 !important;
+}
+.rounded-circle {
+	border-radius: 50% !important;
+}
+
+.img-profile {
+	height: 3rem;
+	width: 3rem;
+}
+
+.show {
+	display: block;
+}

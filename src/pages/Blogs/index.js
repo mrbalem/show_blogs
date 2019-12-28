@@ -30,14 +30,14 @@ const Blogs = () => {
 	}, []);
 
 	return (
-		<div>
+		<div id='blog'>
 			<Spaces />
-			<div class='article-list'></div>
-			<div class='article-list'>
-				<div class='container'>
-					<div class='intro'>
-						<h2 class='text-center'>útlimos artículos</h2>
-						<p class='text-center'>
+			<div className='article-list'></div>
+			<div className='article-list'>
+				<div className='container'>
+					<div className='intro'>
+						<h2 className='text-center'>útlimos artículos</h2>
+						<p className='text-center'>
 							en artichack encontraras los articulos mas recomendamos del ultimo
 							encuentro en esta oportunidad Tendremos
 						</p>
