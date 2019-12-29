@@ -3,11 +3,14 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { StoreContext } from '../../context/StoreContext';
 import { storage, database } from '../../utils/firebaseAuth';
-import useServices from '../../services/useServices/';
+// import useServices from '../../services/useServices/';
+import usePrueba from '../../services/usePrueba';
 
 const CreateBlogPortada = () => {
 	const { state } = useContext(StoreContext);
-	const [datas, setConfig] = useServices();
+	// const [datas, config, setConfig] = usePrueba(
+	// 	'https://us-central1-fir-mrvalem.cloudfunctions.net/portada'
+	// );
 	const [status, setStatus] = useState('Shoose a file');
 	const [porcentage, setPorcentage] = useState(0);
 	const [idPortada, setIdPortada] = useState(null);
@@ -124,14 +127,14 @@ const CreateBlogPortada = () => {
 		event.preventDefault();
 	};
 
-	useEffect(() => {
-		setConfig({
-			type: 'GET',
-			urls: `https://us-central1-fir-mrvalem.cloudfunctions.net/portada`,
-			parametersGET: { nombre: 'Rony CB' },
-			isrequest: true
-		});
-	}, [setConfig]);
+	// useEffect(() => {
+	// 	setConfig({
+	// 		type: 'GET',
+	// 		urls: `https://us-central1-fir-mrvalem.cloudfunctions.net/portada`,
+	// 		parametersGET: { nombre: 'Rony CB' },
+	// 		isrequest: true
+	// 	});
+	// }, [setConfig]);
 
 	return (
 		<div
